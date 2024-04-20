@@ -1,12 +1,10 @@
 // Write your function here:
 const calculateWeight = (earthWeight, planet) => {
-  planet = String();
-  const planets = ['Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn']
+const planets = ['Mercury', 'Venus', 'Mars', 'Jupiter', 'Saturn'];
 if ( !planets.includes(planet)){
   return 'Invalid Planet Entry. Try: Mercury, Venus, Mars, Jupiter, or Saturn.'
 }
-else {
-  switch (planet) {
+switch (planet) {
   case 'Mercury':
     return earthWeight * 0.378;
     break;
@@ -28,7 +26,7 @@ else {
 }
 }
 
-}
+
 
 // Uncomment the line below when you're ready to try out your function
 console.log(calculateWeight(100, 'Jupiter')) // Should print 236
