@@ -1,0 +1,10 @@
+
+//Testing truthyorfalsy
+
+function truthyOrFalsy(test){
+if(test) {
+  return true
+} else {
+  return false
+}
+}
