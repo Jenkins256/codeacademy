@@ -1,0 +1,15 @@
+const tipCalculator = (quality, total) => {
+  switch (quality) {
+    case 'bad':
+    return (5*total) / 100;
+    case 'ok':
+    return (15*total) / 100;
+    case 'good':
+    return (20*total) / 100;
+    case 'excellent':
+    return (30*total) / 100;
+    default:
+    return (18*total) / 100;
+}
+
+}
