@@ -18,3 +18,25 @@ bulletsLeft.textContent = ammoCount.checkAmmo();
 
 ammoCount.grenades = 2;
 console.log(ammoCount);
+
+// VERSION 2 - SETTING UP AN EMPTY OBJECT FIRST / = RATHER THAN :
+
+// Setting up ammo counter
+const ammoCount = new Object();
+    ammoCount.name = 'Magazine',
+    ammoCount.bullets = 30,
+    ammoCount.bulletsFired = 10,
+    ammoCount.checkAmmo = function () {
+        return this.bullets - this.bulletsFired; 
+    }
+
+
+// Updating HTML
+const ammoCheck = document.getElementById('ammoCount');
+ammoCheck.textContent = ammoCount.name;
+
+const bulletsLeft = document.getElementById('ammoLeft');
+bulletsLeft.textContent = ammoCount.checkAmmo();
+
+ammoCount.grenades = 4;
+console.log(ammoCount)
