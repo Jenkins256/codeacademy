@@ -1,0 +1,20 @@
+// VERSION 1
+
+const ammoCount = {
+    name : 'Magazine',
+    bullets: 30,
+    bulletsFired: 10,
+    checkAmmo : function () {
+        return this.bullets - this.bulletsFired; 
+    }
+}
+
+// Updating HTML
+const ammoCheck = document.getElementById('ammoCount');
+ammoCheck.textContent = ammoCount.name;
+
+const bulletsLeft = document.getElementById('ammoLeft');
+bulletsLeft.textContent = ammoCount.checkAmmo();
+
+ammoCount.grenades = 2;
+console.log(ammoCount);
