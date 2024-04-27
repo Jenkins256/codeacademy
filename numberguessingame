@@ -1,0 +1,40 @@
+// This was hard...
+
+let humanScore = 0;
+let computerScore = 0;
+let currentRoundNumber = 1;
+
+// Write your code below:
+
+const generateTarget = (number) => {
+  return Math.floor(Math.random() * 9 + 1);
+};
+
+const compareGuesses = (humanGuess, pcGuess, secretNum) => {
+      if (Math.abs(humanGuess === pcGuess)) {
+        return true;
+    } else if (Math.abs(humanGuess > pcGuess)) {
+        return true;
+    } else if (Math.abs(pcGuess < humanGuess)) {
+        return false;
+    } else if (Math.abs(humanGuess === secretNum)) {
+        return true;
+    } else {
+        return "Error!!! Something is wrong";
+    }
+};
+
+const updateScore = (winner) => {
+  if (winner === "human") {
+        humanScore ++;
+    } else if (winner === "computer") {
+        computerScore ++;
+    } else {
+        humanScore ++;
+    }
+
+const advanceRound = () => currentRoundNumber ++;
+  
+}
+
+
