@@ -1,0 +1,87 @@
+/* Drop menu */
+
+.sub-menu-wrap {
+  position: absolute;
+  top: 100;
+  width: 290px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.8s;
+}
+
+.sub-menu-wrap.open-menu {
+  max-height: 400px;
+}
+
+.sub-menu {
+  background: rgb(252, 246, 242);
+  padding: 0.4rem;
+  margin: 0.6rem;
+}
+
+.info {
+  display: block;
+}
+
+.info p {
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: transform 0.8s;
+}
+
+.sub-menu hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  margin: 0.8;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-self: center;
+  margin: 0.3rem 0.1rem;
+}
+
+.sub-menu-link:hover p {
+  transform: translateX(10px);
+}
+
+
+// JAVASCRIPT
+
+  <script src=""https://code.jquery.com/jquery-3.5.1.min.js">
+         $('#subMenu').on('mouseleave', function()){
+           $('subMenu').hide();
+      }
+    </script>
+    <script>
+      let subMenu = document.getElementById("subMenu");
+
+      function toggleMenu() {
+        subMenu.classList.toggle("open-menu");
+      }
+    </script>
+
+ //HTML
+
+      <li><a href="" onmouseover="toggleMenu()">Works</a></li>
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="info">
+                <a href="#" class="sub-menu-link"><p>Broken Circles</p></a>
+                <a href="#" class="sub-menu-link"><p>Fluid Responses</p></a>
+                <a href="#" class="sub-menu-link"><p>Visual Symphonies</p></a>
+                <a href="#" class="sub-menu-link"><p>Chasing Colour</p></a>
+                <a href="#" class="sub-menu-link"><p>Anti-Alchemy</p></a>
+                <a href="#" class="sub-menu-link"><p>Alchemy</p></a>
+                <a href="#" class="sub-menu-link"><p>Liminal Feasts</p></a>
+                <a href="#" class="sub-menu-link"><p>Chemical Surfaces</p></a>
+                <a href="#" class="sub-menu-link"><p>Trace</p></a>
+                <a href="#" class="sub-menu-link"><p>Scren Time</p></a>
+                <a href="#" class="sub-menu-link"><p>Journey</p></a>
+              </div>
+              <hr />
+            </div>
